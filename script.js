@@ -1,10 +1,12 @@
 const worldEl = document.querySelector ('[data-world]')
 const WORLD_WIDTH = 100
 const WORLD_HEIGHT = 30
-import{updateGround} from 'ground.js'
+import {  updateGround, setupGround  } from './ground.js'
 
 setPixelToWorldScale()
 window.addEventListener('resize',setPixelToWorldScale)
+
+setupGround()
 
 let lastTime
 function update(time) {
