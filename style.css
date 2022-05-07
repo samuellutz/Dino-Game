@@ -14,10 +14,7 @@ body {
 .world {
     overflow: hidden;
     position: relative;
-    width: 100%;
-    height: 300px;
 }
-
 .score {
     position: absolute;
     font-size: 3vmin;
@@ -51,4 +48,11 @@ body {
     left: 1%;
     height:30%;
     bottom: calc(var(--bottom) * 1%)
+}
+
+.cactus{
+    position: absolute;
+    left: calc(var(--left) * 1% );
+    height:30%;
+    bottom: 0;
 }
