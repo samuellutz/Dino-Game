@@ -9,6 +9,15 @@ let nextCactusTime
 
 export function setupCactus(){
     nextCactusTime = CACTUS_INERVAL_MIN
+    document.querySelectorAll('[data-cactus]').forEach(cactus => {
+        cactus.remove()
+    })
+}
+
+export function getCactusRects() {
+    return [...document.querySelectorAll('[data-cactus]')].map(cactus => {
+        return cactus.getBoundingClientRect()
+    })
 }
 
 export function updateCactus(delta, speedScale){

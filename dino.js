@@ -22,9 +22,17 @@ export function setupDino(){
 
 }
 
+export function getDinoRect(){
+    return dinoEl.getBoundingClientRect()
+}
+
 export function updateDino(delta, speedScale){
     handleRun(delta, speedScale)
     handleJump(delta)
+}
+
+export function setDinoLose(){
+    dinoEl.src = "img/dino-lose.png"
 }
 
 function handleRun(delta, speedScale) {
