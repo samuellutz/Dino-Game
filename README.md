@@ -1,4 +1,4 @@
-* [Dino-Game] (https://samuellutz.github.io/Dino-Game/)
+# [Dino-Game](https://samuellutz.github.io/Dino-Game/)
 
 
 This is a clone of the Dino Game to practice my JavaSript skills.
