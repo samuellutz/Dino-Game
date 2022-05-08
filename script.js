@@ -6,7 +6,7 @@ const WORLD_WIDTH = 100
 const WORLD_HEIGHT = 30
 const SPEED_SCALE_INCREASE = .00001
 import {  updateGround, setupGround  } from './ground.js'
-
+import {  updateDino, setupDino  } from './dino.js'
 setPixelToWorldScale()
 window.addEventListener('resize',setPixelToWorldScale)
 document.addEventListener('keydown', handlestart, {once:true})
@@ -23,6 +23,7 @@ function update(time) {
     }
     const delta = time - lastTime
     updateGround(delta, speedScale)
+    updateDino(delta, speedScale)
     updateSpeedScale(delta)
     updateScore(delta)
 
@@ -44,6 +45,7 @@ function updateScore(delta){
      speedScale = 1
      score = 0
      setupGround()
+     setupDino()
      startScreenEl.classList.add('hide')
     window.requestAnimationFrame(update)
  }
