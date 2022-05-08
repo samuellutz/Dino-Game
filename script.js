@@ -7,6 +7,8 @@ const WORLD_HEIGHT = 30
 const SPEED_SCALE_INCREASE = .00001
 import {  updateGround, setupGround  } from './ground.js'
 import {  updateDino, setupDino  } from './dino.js'
+import {  updateCactus, setupCactus  } from './cactus.js'
+
 setPixelToWorldScale()
 window.addEventListener('resize',setPixelToWorldScale)
 document.addEventListener('keydown', handlestart, {once:true})
@@ -26,6 +28,7 @@ function update(time) {
     updateDino(delta, speedScale)
     updateSpeedScale(delta)
     updateScore(delta)
+    updateCactus(delta, speedScale)
 
     lastTime = time
     window.requestAnimationFrame(update)
@@ -46,6 +49,7 @@ function updateScore(delta){
      score = 0
      setupGround()
      setupDino()
+     setupCactus()
      startScreenEl.classList.add('hide')
     window.requestAnimationFrame(update)
  }
